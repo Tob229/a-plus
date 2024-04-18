@@ -49,6 +49,7 @@ urlpatterns = [
     re_path(r'^', include(deviations.urls)),
     re_path(r'^', include(edit_course.urls)),
     re_path(r'^', include(notification.urls)),
+    re_path(r'^', include('django_prometheus.urls')),
     re_path(r'^', include(lti_tool.urls)),
     re_path(r'^', include(exercise.urls)),
     re_path(r'^', include(course.urls)),

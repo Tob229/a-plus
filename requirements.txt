@@ -36,3 +36,5 @@ format_cef ~= 0.0.4
 PyLTI1p3 ~= 2.0.0
 pytz ~= 2024.1
 Faker ~= 18.11.1
+prometheus-client
+django-prometheus
