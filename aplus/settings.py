@@ -297,8 +297,15 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_BROKER_URL = 'redis://redis:6379'
 CELERY_RESULT_BACKEND = 'redis://redis:6379'
 
+#BASCI AUTH CREDENTIALS
+BASIC_AUTH_USERNAME = 'm3tr1cs-Us3R'
+BASIC_AUTH_PASSWORD = 'm3tr1cs-P4ssw0rD'
+
+#MIDDLEWARE
+
 MIDDLEWARE = [
     'django_prometheus.middleware.PrometheusBeforeMiddleware',
+    'aplus.middleware.BasicAuthMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -311,6 +318,7 @@ MIDDLEWARE = [
     'lib.request_globals.ClearRequestGlobals',
     'django_prometheus.middleware.PrometheusAfterMiddleware'
 ]
+
 
 ROOT_URLCONF = 'aplus.urls'
 LOGIN_REDIRECT_URL = "/"
